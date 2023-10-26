@@ -18,15 +18,15 @@ const Register = ({ onRegister, onReturnToSignIn }: Props) => {
   const dispatch = useDispatch();
 
   const [username, setUsername] = useState<string>("");
-  const [displayName, setDisplayName] = useState<string>("");
+  // const [displayName, setDisplayName] = useState<string>("");
 
   const onUserNameChanged = (ev: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(ev.target.value);
   };
 
-  const onDisplayNameChanged = (ev: React.ChangeEvent<HTMLInputElement>) => {
-    setDisplayName(ev.target.value);
-  };
+  // const onDisplayNameChanged = (ev: React.ChangeEvent<HTMLInputElement>) => {
+  //   setDisplayName(ev.target.value);
+  // };
 
   const createPassKey = async () => {
     // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -45,7 +45,6 @@ const Register = ({ onRegister, onReturnToSignIn }: Props) => {
     try {
       const credential = await CreatePassKeyCredential(
         username.toLowerCase(),
-        displayName.toLowerCase(),
         challengeBufferString,
         userId
       );
@@ -76,7 +75,7 @@ const Register = ({ onRegister, onReturnToSignIn }: Props) => {
               addUserAccount({
                 userId: userId,
                 username: username,
-                displayName: displayName,
+                displayName: username,
                 challengeBuffer: challengeBufferString,
                 challenge: challenge,
               })
@@ -103,12 +102,12 @@ const Register = ({ onRegister, onReturnToSignIn }: Props) => {
         value={username}
         onChange={onUserNameChanged}
       />
-      <UserName
+      {/* <UserName
         placeholder={"What should we call you?"}
         type={"text"}
         value={displayName}
         onChange={onDisplayNameChanged}
-      />
+      /> */}
       <SignInButton onClick={createPassKey}> Register</SignInButton>
       <Copy>Already have an account ?</Copy>
       <SignInButton onClick={onReturnToSignIn}>Sign In</SignInButton>

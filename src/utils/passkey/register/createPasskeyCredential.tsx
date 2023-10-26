@@ -2,7 +2,6 @@ import React from "react";
 
 const CreatePassKeyCredential = async (
   username: string,
-  displayName: string,
   challengeBufferString: string,
   userId: string
 ) => {
@@ -29,7 +28,7 @@ const CreatePassKeyCredential = async (
       user: {
         id: userIdBuffer,
         name: username,
-        displayName: displayName,
+        displayName: username,
       },
       // SUPPORT ALL PASSKEYS
       pubKeyCredParams: [
