@@ -20,6 +20,8 @@ const validateClientData = (
   const clientData = parseClientData(credential.response.clientDataJSON);
   console.log("✅  Gathered Client Data: ", clientData);
   if (clientData.origin !== process.env.REACT_APP_ORIGIN) {
+    console.log(clientData.origin);
+    console.log(process.env.REACT_APP_ORIGIN);
     console.log("❌  Origin does not match!");
     return {
       valid: false,
