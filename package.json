@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ipld/dag-json": "^10.1.5",
+    "@peculiar/asn1-ecc": "^2.3.6",
+    "@peculiar/asn1-schema": "^2.3.6",
     "@reduxjs/toolkit": "^1.8.3",
+    "@simplewebauthn/typescript-types": "^8.3.4",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
@@ -11,10 +15,21 @@
     "@types/node": "^16.11.33",
     "@types/react": "^18.0.8",
     "@types/react-dom": "^18.0.3",
+    "asn1js": "^3.0.5",
+    "axios": "^1.6.0",
+    "base64url": "^3.0.1",
+    "base64url-ts2": "^2.0.1",
+    "cbor": "^9.0.1",
+    "ethers": "^6.8.0",
+    "paho-mqtt": "^1.1.0",
+    "process": "^0.11.10",
     "react": "^18.1.0",
+    "react-app-rewired": "^2.2.1",
     "react-dom": "^18.1.0",
     "react-redux": "^8.0.2",
     "react-scripts": "5.0.1",
+    "stream": "^0.0.2",
+    "stream-browserify": "^3.0.0",
     "styled-components": "^5.3.5",
     "typescript": "^4.6.4",
     "web-vitals": "^2.1.4"
@@ -44,6 +59,7 @@
     ]
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.25"
+    "@types/styled-components": "^5.1.25",
+    "buffer": "^6.0.3"
   }
 }
